@@ -24,4 +24,5 @@
       , "authentication"
     ]
   , "license": "MIT"
+  , "main": "SalesforceHelper.js"
 }
