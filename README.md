@@ -8,6 +8,6 @@ Use it to allow your client-side apps to access the Salesforce API.
 ##TODO:
 
  - support other OAuth flows
- - docs
+ - documentation
  - write tests
  - npm publish
