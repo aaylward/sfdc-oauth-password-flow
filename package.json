@@ -1,6 +1,6 @@
 {
     "name": "sfdc-oauth2"
-  , "version": "0.0.2"
+  , "version": "0.0.3"
   , "author": "Andy Aylward <aaylward@gmail.com>"
   ,"repository": {
     "type": "git",
