@@ -8,7 +8,7 @@ Salesforce.com oAuth token generation
 
 ###
 
-sfHelper = (options) ->
+tokenFromUsername = (options) ->
 
   loginServer = if options.env is 'prod' then 'login.salesforce.com' else 'test.salesforce.com'
 
@@ -28,6 +28,6 @@ sfHelper = (options) ->
 
   promise
 
-exports = { sfHelper }
+exports = { tokenFromUsername }
 
 module.exports = exports
