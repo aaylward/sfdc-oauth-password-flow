@@ -3,7 +3,7 @@ qs = require 'qs'
 
 ###
 
-Salesforce.com oAuth token generation
+Salesforce.com OAuth access
 @bugs aaylward@gmail.com <Andy Aylward>
 
 ###
