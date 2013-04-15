@@ -21,12 +21,10 @@ tokenFromUsername = (options) ->
 
   url = "https://#{ loginServer }/services/oauth2/token?#{ qs.stringify data }"
 
-  promise = $.ajax(
+  $.ajax(
     url: url
     type: 'POST'
   ).promise()
-
-  promise
 
 exports = { tokenFromUsername }
 

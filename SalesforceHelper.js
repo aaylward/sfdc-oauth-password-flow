@@ -14,7 +14,7 @@
 
 
   tokenFromUsername = function(options) {
-    var data, loginServer, promise, url;
+    var data, loginServer, url;
 
     loginServer = options.env === 'prod' ? 'login.salesforce.com' : 'test.salesforce.com';
     data = {
@@ -25,11 +25,10 @@
       password: options.password
     };
     url = "https://" + loginServer + "/services/oauth2/token?" + (qs.stringify(data));
-    promise = $.ajax({
+    return $.ajax({
       url: url,
       type: 'POST'
     }).promise();
-    return promise;
   };
 
   exports = {
