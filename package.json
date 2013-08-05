@@ -1,28 +1,37 @@
 {
-    "name": "sfdc-oauth2"
-  , "version": "0.0.3"
-  , "author": "Andy Aylward <aaylward@gmail.com>"
-  ,"repository": {
+  "name": "sfdc-oauth2",
+  "version": "0.0.3",
+  "author": "Andy Aylward <aaylward@gmail.com>",
+  "repository": {
     "type": "git",
     "url": "https://github.com/aaylward/sfdc-oauth-password-flow.git"
-  }
-  , "engines": {
-      "node": "0.10"
-    , "npm": "1.1.65"
-    }
-
-  , "dependencies": {
-      "coffee-script": "1.6.2"
-     ,"jquery": "1.8.3"
-     ,"qs":"*"
-  }
-  , "devDependencies": {
-  }
-  , "keywords": [
-        "salesforce"
-      , "oauth"
-      , "authentication"
-    ]
-  , "license": "MIT"
-  , "main": "SalesforceHelper.js"
+  },
+  "engines": {
+    "node": "0.10",
+    "npm": "1.1.65"
+  },
+  "dependencies": {
+    "coffee-script": "1.6.2",
+    "qs": "*",
+    "request": "~2.25.0",
+    "q": "~0.9.6"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "salesforce",
+    "oauth",
+    "authentication"
+  ],
+  "license": "BSD",
+  "main": "SalesforceHelper.js",
+  "gitHead": "b2465502189e22018b8fa47251b8d16a836ba222",
+  "readmeFilename": "README.md",
+  "description": "Salesforce OAuth Authentication Username / Password Flow ========================",
+  "bugs": {
+    "url": "https://github.com/aaylward/sfdc-oauth-password-flow/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "registry": "http://registry.npm.hubteam.com"
 }

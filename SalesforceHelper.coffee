@@ -1,4 +1,5 @@
-$ = require 'jquery'
+request = require 'request'
+Q = require 'q'
 qs = require 'qs'
 
 ###
@@ -21,10 +22,8 @@ tokenFromUsername = (options) ->
 
   url = "https://#{ loginServer }/services/oauth2/token?#{ qs.stringify data }"
 
-  $.ajax(
-    url: url
-    type: 'POST'
-  ).promise()
+  post = Q.denodeify request.post
+  post url
 
 exports = { tokenFromUsername }
 
