@@ -16,7 +16,8 @@
 
 
   tokenFromUsername = function(options) {
-    var data, loginServer, post, url;
+    var data, deferred, loginServer, url;
+    deferred = Q.defer();
     loginServer = options.env === 'prod' ? 'login.salesforce.com' : 'test.salesforce.com';
     data = {
       grant_type: 'password',
@@ -26,8 +27,13 @@
       password: options.password
     };
     url = "https://" + loginServer + "/services/oauth2/token?" + (qs.stringify(data));
-    post = Q.denodeify(request.post);
-    return post(url);
+    request.post(url, function(err, response, body) {
+      if (err) {
+        return deferred.reject(err);
+      }
+      return deferred.resolve(body);
+    });
+    return deferred.promise;
   };
 
   exports = {
