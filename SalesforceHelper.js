@@ -31,7 +31,7 @@
       if (err) {
         return deferred.reject(err);
       }
-      return deferred.resolve(body);
+      return deferred.resolve(JSON.parse(body));
     });
     return deferred.promise;
   };

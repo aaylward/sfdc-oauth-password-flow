@@ -27,7 +27,7 @@ tokenFromUsername = (options) ->
   request.post url, (err, response, body) ->
     if err
       return deferred.reject err
-    deferred.resolve body
+    deferred.resolve JSON.parse body
 
   deferred.promise
 
