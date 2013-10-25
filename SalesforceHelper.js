@@ -20,7 +20,7 @@
     deferred = Q.defer();
     loginServer = options.env === 'prod' ? 'login.salesforce.com' : 'test.salesforce.com';
     data = {
-      grant_type: 'password',
+      grant_type: options.grant_type || 'password',
       client_id: options.key,
       client_secret: options.secret,
       username: options.username,
