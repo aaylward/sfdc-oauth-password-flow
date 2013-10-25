@@ -16,7 +16,7 @@ tokenFromUsername = (options) ->
   loginServer = if options.env is 'prod' then 'login.salesforce.com' else 'test.salesforce.com'
 
   data =
-    grant_type: 'password'
+    grant_type: options.grant_type or 'password'
     client_id: options.key
     client_secret: options.secret
     username: options.username
